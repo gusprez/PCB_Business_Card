@@ -1,16 +1,21 @@
 boolean toggle1 = 1;
 const uint8_t led_pin_array[] = {5, 6, 7, 8, 9, 10, 11, 12}; // Array con pines de led indicadores de intervalos de 5min
 const uint8_t select_button_pin = 2;
+uint32_t last_pressed = 0;
+const uint8_t button_debounce_ms = 5;
 
 void ISR_button_pin() {
-    if ( toggle1 ) {
-        digitalWrite( 12, HIGH );
-        toggle1 = 0;
+    if ( millis() - last_pressed > button_debounce_ms ) {
+        if ( toggle1 ) {
+            digitalWrite( 12, HIGH );
+            toggle1 = 0;
+        }
+        else {
+            digitalWrite( 12, LOW );
+            toggle1 = 1;
+        }
     }
-    else {
-        digitalWrite( 12, LOW );
-        toggle1 = 1;
-    }
+    last_pressed = millis();
 }
 
 void setup() {
