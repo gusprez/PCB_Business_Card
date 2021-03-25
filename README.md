@@ -1,1 +1,2 @@
 # PCB_Business_Card
+Diseño de una PCB de tamaño de una tarjeta de crédito XXxXXmm, cómo tarjeta de presentación. Además cuenta con la funcionalidad de timer de pomodoros de 30 minutos con descansos de 5. [Técnica Pomodoro](https://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro)
