@@ -8,3 +8,13 @@ Cómo primera versión de este proyecto los bloques que lo conforman son:
 4. Botón de selección
 5. Botón de reset
 6. Conector o pads para la programación del uC por ICSP
+
+## Funcionamiento del sistema
+1. Inicio
+2. Parpadear leds de tiempo hasta arrancar el timer pulsando el botón de selección
+3. Iniciar el timer de 30 minutos y encender led de WORK
+4. Parpadear led del intervalo actual, una vez complentado ese intervalo dejarlo fijo y parpadear el siguiente
+5. Al finalizar los 30 min del pomodoro mostrar animación encendiendo todos los leds de manera ascendente
+6. Encender led de BREAK y apagar el de WORK
+7. Esperar los 5 minutos del descansor
+8. Volver a 3
